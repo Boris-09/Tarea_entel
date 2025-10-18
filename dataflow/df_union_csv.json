@@ -32,7 +32,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "ds_llamadas_entel_cvsCompletos",
+						"referenceName": "ds_llamadas_entel_csvCompletos",
 						"type": "DatasetReference"
 					},
 					"name": "sinkCombinado"
@@ -82,6 +82,22 @@
 				"Csv03Concsv05, csv06 union(byName: true)~> UnionFinal",
 				"UnionFinal sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          SERVICIO as string,",
+				"          REGISTRO as string,",
+				"          NUMERO_A as string,",
+				"          IMEI_A as string,",
+				"          {RBS UTILIZADA_A} as string,",
+				"          CELDA_A as string,",
+				"          LATITUD_LONGITUD_A as string,",
+				"          NUMERO_B as string,",
+				"          IMEI_B as string,",
+				"          RBS_UTILIZADA_B as string,",
+				"          CELDA_B as string,",
+				"          LATITUD_LONGITUD_B as string,",
+				"          FECHA as string,",
+				"          DURACION as string",
+				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sinkCombinado"
 			]
