@@ -5,6 +5,9 @@
 			"referenceName": "ls_sa_datos_entel",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Bronze"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
