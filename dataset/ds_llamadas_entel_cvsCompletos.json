@@ -1,0 +1,24 @@
+{
+	"name": "ds_llamadas_entel_cvsCompletos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sa_datos_entel",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
